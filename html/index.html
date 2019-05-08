@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>Web Sample</title>
+    </head>
+    <body>
+        <h1>Web Sample</h1>
+        <div id="login">
+            <h2>Login</h2>
+            <div>
+                <label for="adminLogin">Admin login</label>
+                <input id="adminLogin" type="text" value="admin"/>
+            </div>
+            <div>
+                <label for="adminPassword">Admin password</label>
+                <input id="adminPassword" type="text" value="admin"/>
+            </div>
+            <div>
+                <label for="hostname">Dispositivo hostname</label>
+                <input id="hostname" type="text" placeholder="http://192.168.106.120:80"/>
+            </div>
+            <div style="margin-top: 10px;">
+                Sessão: <span id="sessaoLogin"></span>
+            </div>
+            <div style="margin-top: 10px;">
+                <button id="conectar">Conectar</button>
+            </div>
+        </div>
+        <div>
+            <h2>Criar usuário</h2>
+            <div>
+                <label for="usuarioNome">Nome</label>
+                <input id="usuarioNome" type="text" value="Meu usuario" />
+            </div>
+            <div style="margin-top: 10px;">
+                ID: <span id="usuarioId"></span>
+            </div>
+            <div style="margin-top: 10px;">
+                <button id="salvarUsuario">Salvar</button>
+            </div>
+        </div>
+
+        <div>
+            <h2>Criar cartão</h2>
+            <div>
+                <label for="cartaoUsuarioId">Usuário ID</label>
+                <input id="cartaoUsuarioId" type="number" min="0" />
+            </div>
+            <div>
+                <label for="cartaoNumeroAntesVirgula">Número antes da virgula</label>
+                <input id="cartaoNumeroAntesVirgula" type="number" min="0" value="0" />
+            </div>
+            <div>
+                <label for="cartaoNumeroDepoisVirgula">Número depois da virgula</label>
+                <input id="cartaoNumeroDepoisVirgula" type="number" min="0" value="0" />
+            </div>
+            <div style="margin-top: 10px;">
+                Número c/ cálculo: <span id="cartaoNumeroCalculado"></span>
+            </div>
+            <div style="margin-top: 10px;">
+                ID: <span id="cartaoId"></span>
+            </div>
+            <div style="margin-top: 10px;">
+                <button id="salvarCartao">Salvar</button>
+            </div>
+        </div>
+        <div>
+            <h2>Adicionar usuario ao grupo</h2>
+            <div>
+                <label for="grupoUsuarioId">Usuário ID</label>
+                <input id="grupoUsuarioId" type="number" />
+            </div>
+            <div>
+                <label for="grupoId">Grupo ID</label>
+                <input id="grupoId" type="number" value="1" />
+            </div>
+            <div style="margin-top: 10px;">
+                ID: <span id="usuarioGrupoId"></span>
+            </div>
+            <div style="margin-top: 10px;">
+                <button id="salvarUsuarioGrupo">Salvar</button>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        const device = {
+            hostname: 'http://192.168.110.200:80'
+        };
+
+        let session = '';
+
+        let usuarioId = '';
+
+        let cartaoId = '';
+
+        let grupoId = '1';
+
+        let usuarioGrupoId = '';
+
+        let cartaoNumeroCalculado = '';
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/usuario.js"></script>
+    <script src="../js/cartao.js"></script>
+    <script src="../js/grupo.js"></script>
+
+</html>
