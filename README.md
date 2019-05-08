@@ -1,2 +1,2 @@
 # sample-api-js
-A sample using JavaScript, JQuery and Ajax to communicating access devices API
+A sample using JavaScript, JQuery and AJAX to communicating access devices API
